@@ -1,0 +1,71 @@
+body {
+  background-color: #000;
+}
+
+#landing-header {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  padding-top: 40vh;
+}
+
+#landing-header h1 {
+  color: #fff;
+}
+
+.backimagelist li{
+ height: 100%;
+ width: 100%;
+ position: absolute;
+ top: 0;
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position: 50%;
+ z-index:0;
+
+ animation: imageAnimation ease-in-out 10s infinite;
+}
+
+li:nth-child(1) {
+  opacity: 0;
+  animation-delay: 5s;
+  background-image: url(https://www.campsitephotos.com/photo/camp/48981/Crater_Lake_3.jpg);
+} 
+
+li:nth-child(2) {
+  opacity: 0;
+  animation-delay: 10s;
+  background-image: url(http://www.wonderfulwellies.co.uk/wp-content/uploads/2017/04/camping-security.jpeg)
+} 
+
+li:nth-child(3) {
+  opacity: 0;
+  animation-delay: 15s;
+  background-image: url(http://d2x3wmakafwqf5.cloudfront.net/wordpress/wp-content/blogs.dir/112/files/2016/03/Camping-in-BC.jpg);
+} 
+
+li:nth-child(4) {
+  opacity: 0;
+  animation-delay: 20s;
+  background-image: url(http://www.exploresquamish.com/files/dmo_listing_and_extra_images/Stawamus-Chief-Campground-1500x1000.jpg);
+} 
+
+@keyframes imageAnimation { 
+  0% { 
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0; 
+  }
+}
+
+/* Older browser support - .no-cssanimations class added by modernizr */
+.no-cssanimations .slideshow li {
+	opacity: 1;
+}
